@@ -5,7 +5,7 @@ import AddressLink from "../ListingDetail/AddressLink";
 import PlaceGallery from "../ListingDetail/PlaceGallery";
 import BookingDates from "./BookingDates";
 
-const Bookingpage = () => {
+const BookingPage = () => {
   const { id } = useParams();
   const [booking, setBooking] = useState(null);
 
@@ -43,4 +43,4 @@ const Bookingpage = () => {
   );
 };
 
-export default Bookingpage;
+export default BookingPage;
