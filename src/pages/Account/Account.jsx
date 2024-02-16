@@ -8,9 +8,6 @@ const Account = () => {
   const { user, ready, setUser } = useContext(userContext);
   const [redirect, setRedirect] = useState(null);
 
-
-  if (!ready) return <div>loading...</div>;
-
   // redirect to login page if no user and ready=true and redirect=null
 
   if (ready && !user && !redirect) {
