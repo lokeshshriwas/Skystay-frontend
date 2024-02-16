@@ -11,7 +11,7 @@ const SingleBookingPage = () => {
 
   useEffect(() => {
     if (id) {
-      axios.get("/api/booking").then((response) => {
+      axios.get(`/api/booking?token=${localStorage.getItem("token")}`).then((response) => {
         const foundBooking = response.data.find(({ _id }) => _id === id);
         if (foundBooking) {
           setBooking(foundBooking);

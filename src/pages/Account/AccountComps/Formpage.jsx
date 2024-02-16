@@ -40,6 +40,7 @@ const Formpage = () => {
   }
 
   async function savePlace(e) {
+    const {token} = localStorage.getItem("token")
     e.preventDefault();
     const placeData = {
       title,
@@ -52,7 +53,8 @@ const Formpage = () => {
       checkIn,
       checkOut,
       maxGuests,
-      category
+      category,
+      token
     };
     if (id) {
       await axios.put("/api/places", { id, ...placeData });
