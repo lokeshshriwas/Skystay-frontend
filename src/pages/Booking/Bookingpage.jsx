@@ -11,7 +11,7 @@ const Bookingpage = () => {
 
   useEffect(() => {
     if (id) {
-      axios.get("/booking").then((response) => {
+      axios.get("/api/booking").then((response) => {
         const foundBooking = response.data.find(({ _id }) => _id === id);
         if (foundBooking) {
           setBooking(foundBooking);

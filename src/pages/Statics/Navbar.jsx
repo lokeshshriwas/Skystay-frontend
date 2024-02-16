@@ -24,7 +24,7 @@ const Navbar = () => {
     e.preventDefault();
     if (searchTerm.length > 0) {
       setSearchResult([]);
-      const response = await axios.get("/search", {
+      const response = await axios.get("/api/search", {
         params: {
           searchTerm,
         },

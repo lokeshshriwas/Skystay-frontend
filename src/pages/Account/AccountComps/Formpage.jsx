@@ -55,9 +55,9 @@ const Formpage = () => {
       category
     };
     if (id) {
-      await axios.put("/places", { id, ...placeData });
+      await axios.put("/api/places", { id, ...placeData });
     } else {
-      await axios.post("/places", placeData);
+      await axios.post("/api/places", placeData);
     }
 
     navigate("/account/places");
@@ -67,7 +67,7 @@ const Formpage = () => {
     if (!id) {
       return;
     }
-    axios.get(`/places/${id}`).then((response) => {
+    axios.get(`/api/places/${id}`).then((response) => {
       const { data } = response;
       setTitle(data.title);
       setAddress(data.address);

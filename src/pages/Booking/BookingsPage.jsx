@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Account from "../Account/Account";
 import axios from "axios";
 import Placeimg from "./Placeimg";
-import { differenceInCalendarDays, format } from "date-fns";
 import icons from "../../assets/icons/icons";
 import BookingDates from "./BookingDates";
 
@@ -10,7 +9,7 @@ const BookingsPage = () => {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
-    axios.get("/booking").then((response) => {
+    axios.get("/api/booking").then((response) => {
       const { data } = response;
       setBookings(data);
     });

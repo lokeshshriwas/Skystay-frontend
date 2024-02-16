@@ -11,7 +11,7 @@ const Home = () => {
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
-    axios.get("/listings").then((response) => {
+    axios.get("/api/listings").then((response) => {
       const { data } = response;
       setListing(data);
     });
@@ -19,7 +19,7 @@ const Home = () => {
 
   useEffect(() => {
     if (filter) {
-      axios.get(`/filter/${filter}`).then((response) => {
+      axios.get(`/api/filter/${filter}`).then((response) => {
         const { data } = response;
         setListing(data);
       });

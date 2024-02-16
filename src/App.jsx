@@ -20,7 +20,8 @@ import Formpage from "./pages/Account/AccountComps/Formpage";
 import { useContext } from "react";
 
 axios.defaults.baseURL = import.meta.env.VITE_BASEURL
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true
+
 
 function App() {
   const {user} = useContext(userContext)

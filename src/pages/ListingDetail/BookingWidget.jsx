@@ -42,7 +42,7 @@ const BookingWidget = ({ details }) => {
       price: numberOfNights * details.price * 1.18,
     };
     try {
-      const response = await axios.post("/booking", data);
+      const response = await axios.post("/api/booking", data);
       const bookingId = response.data._id;
       setRedirect(`/account/booking/${bookingId}`);
     } catch (error) {
