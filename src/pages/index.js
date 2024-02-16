@@ -9,7 +9,7 @@ import BookingsPage from "./Booking/BookingsPage";
 import { Places, Profile } from "./Account/AccountComps";
 import AccountNav from "./Account/AccountComps/AccountNav";
 import Notfound from "./Statics/Notfound";
-import BookingPage from "./Booking/Bookingpage";
+import SingleBookingPage from "./Booking/SingleBookingPage";
 
 export {
   Navbar,
@@ -20,7 +20,7 @@ export {
   Home,
   ListingDetail,
   BookingsPage,
-  BookingPage,
+  SingleBookingPage,
   Profile,
   AccountNav,
   Places,
