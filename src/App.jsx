@@ -9,9 +9,10 @@ import {
   Profile,
   Places,
   BookingsPage,
-  Notfound
+  Notfound,
+  BookingPage
 } from "./pages";
-import BookingPage from "./pages/Booking/BookingPage"
+
 
 import Layout from "./Layout";
 import axios from "axios";
