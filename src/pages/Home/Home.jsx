@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Filter from "../Search/FIlter";
 import Searchcontext from "../../Context/Searchcontext";
 
@@ -9,13 +9,14 @@ const Home = () => {
   const [filter, setFilter] = useState("");
   const [listing, setListing] = useState([]);
   const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate()
 
   useEffect(() => {
     axios.get("/api/listings").then((response) => {
       const { data } = response;
       setListing(data);
     });
-  }, []);
+  }, [navigate]);
 
   useEffect(() => {
     if (filter) {
