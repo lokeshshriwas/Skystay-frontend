@@ -5,7 +5,7 @@ import Filter from "../Search/FIlter";
 import Searchcontext from "../../Context/Searchcontext";
 
 const Home = () => {
-  const { searchResult } = useContext(Searchcontext);
+  const { searchResult, reload } = useContext(Searchcontext);
   const [filter, setFilter] = useState("");
   const [listing, setListing] = useState([]);
   const [toggle, setToggle] = useState(false);
@@ -16,7 +16,7 @@ const Home = () => {
       const { data } = response;
       setListing(data);
     });
-  }, [navigate]);
+  }, [reload]);
 
   useEffect(() => {
     if (filter) {
