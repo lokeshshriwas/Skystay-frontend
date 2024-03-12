@@ -23,7 +23,7 @@ const Photos = ({ photos, setPhotos }) => {
     for (let i = 0; i < files.length; i++) {
       data.append("photos", files[i]);
     }
-    const { data: filenames } = await axios.post("/upload", data, {
+    const { data: filenames } = await axios.post("/api/upload", data, {
       headers: { "Content-Type": "multipart/form-data" },
     });
     setPhotos((prev) => {
